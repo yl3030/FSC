@@ -9,31 +9,32 @@
 </head>
 
 <body>
-<header class="clearfix">
-    <div class="box1">
-        <a href="index.html"><img src="images/logo.png" alt="website-logo"></a>
-    </div><!-- //box1 -->
-    <div class="box2">    	
-        <nav class="offcanvas" id="offcanvas">
-            <ul>        
-                <li><a href="index.html">首頁</a></li>
-                <li><a href="about.html">關於我們</a></li>
-                <li><a href="price.html">業務詢價</a></li>
-                <li><a href="service.html">服務項目</a></li>
-                <li><a href="news.html">最新消息</a></li>
-                <li><a href="cases.html">實績介紹</a></li>
-                <li><a href="program.html">方案介紹</a></li>     
-                <!-- <li><a href="contact.html">連絡我們</a></li> -->
-                <li><a href="employ.html">人才履歷</a></li>             
-            </ul>       
-        </nav>
-        <div class="hamburger header_menu js-toggle-trigger" data-target="offcanvas">
-			<span class="bar"></span>
-			<span class="bar"></span>
-			<span class="bar"></span>
-		</div> <!--//"hamburger-->		
-    </div><!-- //box2 -->	
-</header>
+    <header class="clearfix">
+        <div class="box1">
+            <a href="index.html"><img src="images/logo.png" alt="福爾摩沙保全"></a>
+        </div><!-- //box1 -->
+        <div class="box2">    	
+            <nav class="offcanvas" id="offcanvas">
+                <ul>        
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="about.html">關於我們</a></li>
+                    <!-- <li><a href="price.html">業務詢價</a></li> -->
+                    <li><a href="service.html">服務項目</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                    <li><a href="cases.html">實績介紹</a></li>
+                    <!-- <li><a href="program.html">方案介紹</a></li>      -->
+                    <li><a href="contact.html">聯絡我們</a></li>
+                    <li><a href="employ.html">人才履歷</a></li>
+                    <li><a href="employ.html">員工專區</a></li>             
+                </ul>       
+            </nav>
+            <div class="hamburger header_menu js-toggle-trigger" data-target="offcanvas">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div> <!--//hamburger-->		
+        </div><!-- //box2 -->	
+    </header>
 <div class="pageCover"></div>
 
     
@@ -43,9 +44,9 @@
 
 <main class="casesWrap clearfix">
 	<div class="sort">
-        <div class="pdBurg">分類選擇</div>
+        <div class="pdBurg">服務項目分類</div>
 		<!-- ----------------------------panel -->
-        <div class="panel wow animated fadeInUp" data-wow-delay="0.3s">        
+        <div class="panel wow animated fadeInUp" data-wow-delay="0.3s">   
             <ul class="accordion">
                 <li>
                     <a class="heading">類別名稱一</a>
@@ -222,17 +223,36 @@
         </div>          
         </li>
     </ul>   
+    <ul class="pagination flex-style">
+        <li>
+          <button class="prev" title="previous page"><i class="fas fa-chevron-left"></i></button>
+        </li>
+
+        <li class="active"><button title="first page - page 1">1</button></li>
+
+        <li><span>...</span></li>
+
+        <li><button title="page 8">4</button></li>
+
+        <li>
+          <button class="active" title="current page - page 9">5</button>
+        </li>
+
+        <li><button class="next" title="next page"><i class="fas fa-chevron-right"></i></button></li>
+      </ul>
 	</div><!-- //cnt -->
 		
 	
 	<!-- 分頁 -->
-	<div class="pageWrap clearfix"> 
+	<!-- <div class="pageWrap clearfix"> 
         <div id="myPage" class="pagination-sm"></div>                   
-    </div> 
+    </div>  -->
+    
 </main>
 
 
 <footer class="clearfix">    
+    <div class="inner">
     <div class="box">
         <div class="wrap1">
             <p class="comNa">福爾摩沙保全股份有限公司</p>
@@ -242,22 +262,28 @@
     </div>
     <div class="box">
         <div class="wrap1">
-            <p>TEL：<span>(04) 2222-0817<span></p>
-            <p>FAX：<span>(04) 2222-0833<span></p>
-            <p>MAIL：<span><a href="mailto:formosafsc@gmail.com">formosafsc@gmail.com</a><span></p>
-            <p>ADD：<span>台中市中區綠川西街85號3樓</span></p>
+            <p class="comNa">電話｜<span>(04) 2222-0817<span></p>
+            <!-- <p>FAX：<span>(04) 2222-0833<span></p> -->
+            <p class="comNa">信箱｜<span><a href="mailto:formosafsc@gmail.com">formosafsc@gmail.com</a><span></p>
+            <p class="comNa">地址｜<span>台中市中區綠川西街85號3樓</span></p>
         </div>
     </div>     
-    <div class="box clearfix">
+    <div class="box clearfix box3">
         <div class="wrap1">
+            <a href="#"><i class="fab fa-line"></i></a>
             <a href="#"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fab fa-instagram-square"></i></a>
-            <a href="#"><i class="fab fa-app-store-ios"></i></a>            
+            <!-- <a href="#"><i class="fab fa-instagram-square"></i></a> -->
+            <!-- <a href="#"><i class="fab fa-app-store-ios"></i></a>             -->
         </div> <!-- //wrap1 -->  
-    </div>    
+        <div class="phone-label">
+            <i class="fas fa-phone-alt"></i>
+            <span>(04) 2222-0817</span>
+        </div>
+    </div>  
+</div>  
 </footer>
 <section class="copyright"><p>Copyright(c)Formosa Security Co. All rights reserved</p></section>
-<div class="cd-top js-cd-top"></div><!-- back to top -->    
+<div class="cd-top js-cd-top"></div><!-- back to top -->  
 
 
 <script src="scripts/jquery-2.2.2.min.js"></script>
