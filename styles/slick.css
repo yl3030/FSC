@@ -1,0 +1,225 @@
+/*----------------------------------*\
+   # slick-slider ★較常變更 
+\*----------------------------------*/
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus {
+    outline: none;
+}
+.slick-slide {
+    display: none;
+    float: left;
+    min-height: 1px;
+    height: 100%;    
+    margin: 0; 
+    transition: all ease-in-out .3s;
+    opacity: .2;     
+}
+.slick-active {     
+    opacity: 1; 
+}
+.slick-slide img {
+    display: block;
+    width: 100%;
+}
+.slick-current {
+    opacity: 1; 
+}
+.slick-initialized .slick-slide{
+    display: block;
+}
+.slick-vertical .slick-slide{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+/* -------------------------------Arrows */
+.slick-prev,
+.slick-next {
+    font-size: 0; 
+    line-height: 0;
+    color: transparent;    
+    position: absolute; 
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;    
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+/*▉▉▉▉▉誰用了左右箭頭:冠上class名稱,並可微調箭頭位置▉▉▉▉▉*/
+.newsSlider .slick-prev, 
+.pdSlider .slick-prev  {
+    left: -25px; top: 50%;
+}
+.newsSlider .slick-next,
+.pdSlider .slick-next {
+    right: -25px; top: 50%;
+}
+/*▉▉▉▉▉以下兩段:㊀誰用了左右箭頭:冠上class名稱 ㊁調整箭頭大小及顏色▉▉▉▉▉*/  
+.pdSlider .slick-prev:before{  
+    content: '　';
+    width: 18px;
+    height: 18px;
+    border-right: 2px solid #1cc;
+    border-bottom:2px solid #1cc;
+    position: absolute;
+    transform: rotate(135deg);
+    left:0;
+}
+.pdSlider .slick-next:before{    
+    content: '　';
+    width: 18px;
+    height: 18px;
+    border-right: 2px solid #1cc;
+    border-bottom:2px solid #1cc;
+    position: absolute;
+    transform: rotate(-45deg);
+    left:0;  
+}
+/*▉▉▉▉▉pdSlider箭頭改用圖片時,用以下3段,並註解掉以上2段▉▉▉▉▉*/
+/*.pdSlider .slick-prev, .pdSlider .slick-prev:hover { 
+    background: url(../images/left-arrow.png) no-repeat 0 0;
+}
+.pdSlider .slick-next, .pdSlider .slick-next:hover {
+    background: url(../images/right-arrow.png) no-repeat 0 0;
+}
+.pdSlider .slick-prev, .pdSlider .slick-next {
+    z-index: 2; 
+    width: 13px; 
+    height: 25px; 
+}*/
+
+
+/*▰▰▰▰▰▰誰用了上下箭頭:冠上class名稱,並可微調箭頭位置▰▰▰▰▰▰*/
+.vertical .slick-prev { 
+    top:-25px;
+    left:calc(50% - 10px); 
+}
+.vertical .slick-next { 
+    bottom: -20px;
+    right:calc(50% - 10px);
+}
+/*▰▰▰▰▰▰以下兩段:㊀誰用了上下箭頭:冠上class名稱 ㊁調整箭頭大小及顏色▰▰▰▰▰▰*/  
+.vertical .slick-prev:before{  
+    content: '　';
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid #f00;
+    border-bottom:2px solid #f00;
+    position: absolute;
+    transform: rotate(-135deg);
+    left:0; 
+}
+.vertical .slick-next:before{    
+    content: '　';
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid #f00;
+    border-bottom:2px solid #f00;
+    position: absolute;
+    transform: rotate(45deg);
+    left:0;  
+}
+/*▰▰▰▰▰▰vertical箭頭改用圖片時,用以下3段,並註解掉以上2段▰▰▰▰▰▰*/
+/*.vertical .slick-prev, .vertical .slick-prev:hover { 
+    background: url(../images/top-arrow.png) no-repeat 0 0;
+}
+.vertical .slick-next, .vertical .slick-next:hover {
+    background: url(../images/down-arrow.png) no-repeat 0 0;
+}
+.vertical .slick-prev, .vertical .slick-next {
+    z-index: 2; 
+    width: 25px; 
+    height: 13px; 
+}*/
+
+
+/*-------------------------------Dots*/
+.slick-dots {
+    position: absolute;
+    bottom: -25px; /*★負值:Dots在圖片下,正值:Dots在圖片上*/
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px; /*★點與點間距*/
+    padding: 0;
+    cursor: pointer;
+}
+/*每個點改成數字時改以下設定*/
+.slick-dots li button { 
+    font-size: 0; 
+    color: transparent; 
+    width: 20px; height: 20px;
+    line-height: 0;
+    display: block;    
+    padding: 5px;
+    cursor: pointer;    
+    border: 0;
+    outline: none;
+    background: transparent; 
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    opacity: 1;
+}
+.slick-dots li button:before {    
+    font-size: 30px; /*★變更圓點大小*/
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '●';
+    text-align: center;
+    opacity: .25;
+    color: black; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: black; 
+}
