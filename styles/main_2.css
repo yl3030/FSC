@@ -380,34 +380,41 @@ button {
 \*----------------------------------*/
 .newsWrap {
   width: 100%;
-  max-width: 1000px;
+  /* max-width: 1000px; */
+  padding: 0 60px;
   margin: 0 auto 4em;
+  display: flex;
+  flex-wrap: wrap;
 }
 .newsWrap .sort {
-  float: left;
+  /* float: left; */
   width: 200px;
 }
 .newsWrap .cnt {
-  float: left;
-  width: 80%;
+  /* float: left; */
+  width: calc(100% - 200px);
   padding-left: 2em;
 }
 .newsWrap .cnt2 {
-  /*0107*/
   float: left;
   width: calc(100% - 200px);
   padding: 0 0 0 40px;
 }
+.newsWrap .news-box li {
+  width: 50%;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
 .newsWrap .cnt li {
-  float: left;
-  display: inline-block;
-  width: calc((100% - 30px) / 2);
-  margin: 0 30px 40px 0;
+  /* float: left; */
+  /* display: inline-block; */
+  /* width: calc((100% - 30px) / 2); */
+  /* margin: 0 30px 40px 0; */
 }
 .newsWrap .cnt li:nth-child(2n) {
-  margin: 0 0 40px 0;
+  /* margin: 0 0 40px 0; */
 }
-.newsWrap .cnt li .box1 {
+/* .newsWrap .cnt li .box1 {
   width: 26%;
   float: left;
   padding-right: 10px;
@@ -415,8 +422,8 @@ button {
 .newsWrap .cnt li .box2 {
   width: 74%;
   float: right;
-}
-.newsWrap .cnt li .box1 img {
+} */
+/* .newsWrap .cnt li .box1 img {
   width: 100%;
 }
 .newsWrap .cnt h2 {
@@ -440,7 +447,7 @@ button {
   font-size: 0.75em;
   margin-top: 0.6em;
   color: #acd6ff;
-}
+} */
 /*=============側選單*/
 .pdBurg {
   /* display: none; */
@@ -516,6 +523,28 @@ button {
   transition: all 0.2s ease-in-out;
 }
 @media (max-width: 1025px) {
+  
+  /* .newsWrap .cnt li {
+    width: calc((100% - 10px) / 2);
+    margin: 0 10px 30px 0;
+  }
+  .newsWrap .cnt li:nth-child(2n) {
+    margin: 0 0 30px 0;
+  }
+  .newsWrap .cnt li .box1 {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .newsWrap .cnt li .box2 {
+    width: 100%;
+  }
+  .newsWrap .cnt li .box1 img {
+    width: 100%;
+    height: 30vw;
+  } */
+  
+}
+@media (max-width: 768px) {
   .newsWrap {
     width: 100%;
     margin: 0 auto 2em;
@@ -535,24 +564,6 @@ button {
     /*0107*/
     width: 100%;
     padding: 10px;
-  }
-  .newsWrap .cnt li {
-    width: calc((100% - 10px) / 2);
-    margin: 0 10px 30px 0;
-  }
-  .newsWrap .cnt li:nth-child(2n) {
-    margin: 0 0 30px 0;
-  }
-  .newsWrap .cnt li .box1 {
-    width: 100%;
-    padding-right: 0px;
-  }
-  .newsWrap .cnt li .box2 {
-    width: 100%;
-  }
-  .newsWrap .cnt li .box1 img {
-    width: 100%;
-    height: 30vw;
   }
   .pdBurg {
     position: relative;
@@ -1222,26 +1233,50 @@ img.img_about {
 .cont-form-group {
   position: relative;
   margin-bottom: 0.75em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #aaa;
+  /* padding: 10px 0; */
+}
+.cont-form-group label {
+  font-size: 17px;
+  width: 40px;
+  color: gray;
 }
 .cont-form-group.message {
   margin-top: 2em;
+  align-items: start;
+  border: 0;
 }
 .cont-form-group.buttons {
   margin-bottom: 0;
   /* text-align: right; */
   margin-top: 40px;
+  border: 0;
+}
+.cont-form-group.vertify label {
+  width: 65px;
+}
+.cont-form-group.message label {
+  padding-top: 8px;
 }
 .cont-form-control {
-  width: 100%;
-  padding: 10px 0;
+  width: calc(100% - 40px);
   background: none;
+  padding: 10px 5px;
   border: none;
-  border-bottom: 1px solid #aaa;
   color: black;
   font-size: 0.9em;
   text-transform: uppercase;
   outline: none;
   transition: border-color 0.2s;
+}
+.cont-form-group.vertify .cont-form-control {
+  width: calc(100% - 65px);
+}
+.cont-form-group.message .cont-form-control {
+  background-color: #fff;
 }
 .check {
   position: absolute;

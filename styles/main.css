@@ -372,23 +372,23 @@ a:hover.about_more {
 	margin: 80px auto 0;
 }
 
-.home_news .clearfix {
+.news-box {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.home_news .clearfix li {
+.home_news .news-box li {
 	width: 33.3333%;
 	padding: 0 10px;
 	margin-bottom: 30px;
 }
 
-.home_news .clearfix li .box2 {
+.news-box li .box2 {
 	border: 1px solid #A7A7A7;
 	padding: 30px 20px;
 }
 
-.home_news .clearfix li .box2 .topic {
+.news-box li .box2 .topic {
 	font-size: 20px;
 	font-weight: 700;
 	color: #3A4C8C;
@@ -399,7 +399,7 @@ display: -webkit-box;
 -webkit-line-clamp:2;
 }
 
-.home_news .clearfix li .box2 .content {
+.news-box li .box2 .content {
 	margin: 0;
 	font-size: 16px;
 	overflow: hidden;
